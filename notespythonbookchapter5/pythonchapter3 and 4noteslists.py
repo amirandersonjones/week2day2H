@@ -201,4 +201,199 @@ print("Thanks to everyone for their participation")
 #56 Chapter 4 value in the list. Therefore, you can do as much work as you like with 
 # each value in the list.
 
-#Doing Something After a for Loop
+#Making Numerical Lists
+#Using the range() Function-In this example, range() prints only the numbers 1 through 4. 
+    # This is another result of the off-by-one behavior you’ll see often in programming 
+    #languages. The range() function causes Python to start counting at the first 
+    #value you give it, and it stops when it reaches the second value you provide. 
+    #Because it stops at that second value, the output never contains the end 
+    #value, which would have been 5 in this case.
+
+for value in range(1,11):
+    print(value)
+
+for number in range(1,21):
+    print(number)
+
+    print("hello")
+for number in range(1,21):
+    print(number)
+
+#Using range() to Make a List of Numbers
+my_favorite_numbers = list(range(1,10))
+print(my_favorite_numbers)
+for numbers in range(8,11):
+    print(numbers)
+my_favorite_numbers = list(range(20,41))
+print(my_favorite_numbers)
+
+for numbers in range(1,5):
+    print(numbers)
+
+my_list = list(range(1,10))
+print(my_list)
+
+odd_numbers = list(range(1,11,2))
+print(odd_numbers)
+
+#create a list of the first ten numbers squared.
+#create a list of 1-10
+#square the numbers using **2
+#print the list of numbers
+
+squares=[] #create an empty list of squares
+for value in range(1,11): #for loop to cycle through all the #'s we need squared.spaure 1-12
+    square = value**2 #here we state what we will be doing as we cycle the for loop
+    squares.append(square) #this statement read append the square to the list of squares
+print(squares)
+
+squares = []
+for value in range(1,11):
+    square = value **2
+    squares.append(square)
+print(squares)
+
+for value in range(1-9):
+    print(value)
+
+my_bif_list= list(range(2,11,2))
+print(my_bif_list)
+
+#PERFORMING SIMPLE STATS ON LISTS: MIN/MAX/SUM
+digits = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+print(min(digits))
+print(max(digits))
+print(sum(digits))
+
+for values in range(9, 31):
+    print(values)
+
+my_dog= list(range(9,13))
+print(my_dog)
+
+for value in range(100, 113):
+    print(value)
+
+my_tote= list(range(1,16))
+print(my_tote)
+
+for values in range(1,9):
+    print(values)
+
+#LIST COMPRHENSION-A list comprehension allows you to generate 
+#this same list in just one line of code. A list comprehension combines the 
+#for loop and the creation of new elements into one line, and automatically 
+#appends each new element. 
+
+squares= [value** 2 for value in range (1, 11)]
+print(squares)
+
+for value in range(1, 21):
+    print(value)
+
+a_million= list(range(1, 100000))
+print(max(a_million))
+print(min(a_million))
+print(sum(a_million))
+
+for values in list(range(1,21,2)):
+    print(values)
+
+for values in list(range(3,31,3)):
+    print(values)
+
+squares= []
+for values in range(1,21):
+    square = values **2
+    squares.append(square)
+print(squares)
+
+cubes=[]
+for values in range(1,11):
+    cube=values**3
+    cubes.append(cube)
+print(cubes)
+
+cubes=[value**3 for value in range(1,21)]
+print(cubes)
+
+#SLICING-To make a slice, you specify the index of the first and last elements you 
+#want to work with. As with the range() function, Python stops one item 
+#before the second index you specify.
+
+players = ['charles', 'martina', 'michael', 'florence', 'eli'] 
+print(players[0:3])
+
+#CHAPTER 7 WHILE LOOPS AND USER INPUT
+#You’ll use Python’s while loop to keep programs running as long as certain conditions remain true.
+#THE INPUT FUNCTION = input()
+message= input("Tell me something about yourelf and I'll repeat it:")
+print(message)
+
+#The input() function pauses your program and waits for the user to enter 
+#some text. Once Python receives the user’s input, it stores it in a variable to 
+#make it convenient for you to work with.
+#PROMPTS
+    #Sometimes you’ll want to write a prompt that’s longer than one line. For 
+    #example, you might want to tell the user why you’re asking for certain input. 
+    #User Input and while Loops 119
+    #You can store your prompt in a variable and pass that variable to the input()
+    #function. This allows you to build your prompt over several lines, then write 
+    #a clean input() statement.
+
+
+prompt = "I promise I wont do anything with your personal information."
+prompt += "\nWhat is your first name?"
+name = input(prompt)
+print("\n Hello" + " " + name + "!")
+
+address = input("What is your address?:")
+address_prompt = "We only use your address for shipment info!"
+address = input(address_prompt)
+
+
+print("\nThanks for entering your address!")
+
+#Using int() to Accept Numerical Input
+#When you use the input() function, Python interprets everything the user enters as a string
+# When you try to use the input to do a numerical comparison u, Python 
+#produces an error because it can’t compare a string to an integer: 
+#We can resolve this issue by using the int() function, which tells 
+#Python to treat the input as a numerical value. The int() function converts a 
+# string representation of a number to a numerical representation, 
+#as shown here:
+
+age=input("How old are you?")
+age=int(age)
+print(age)
+
+age > 18
+print(True)
+
+height= input("How tall are you?")
+height=int(height)
+if height >= 44:
+    print("\nYou are tall enough for this ride!")
+else:
+    print("\nYou're not tall enough!")
+
+number=input("Please enter a number here.")
+number=int(number)
+if number % 2 ==0:
+    print("This number is even!")
+else:
+    print("This number is odd!")
+
+#THE WHILE LOOP
+#The for loop takes a collection of items and executes a block of code once 
+#for each item in the collection. In contrast, the while loop runs as long as, 
+#or while, a certain condition is true.
+
+current_number = 1
+while current_number <= 5:
+    print(current_number)
+    current_number +=1
+
+prompt = "\nTell me something, and I will repeat it back to you:"
+prompt += "\nEnter 'quit' to end the program.
+message = " "
